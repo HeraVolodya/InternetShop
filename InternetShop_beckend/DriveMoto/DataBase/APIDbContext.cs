@@ -1,6 +1,5 @@
 ﻿using DriveMoto.Models;
 using DriveMoto.Models.DTOs;
-using DriveMoto.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;

@@ -5,6 +5,9 @@ namespace InternetShop_beckend.Models
     public class RegisterModel
     {
         [Required]
+        public string? UserName { get; set; }
+
+        [Required]
         [StringLength(50)]
         [EmailAddress]
         public string? Email { get; set; }

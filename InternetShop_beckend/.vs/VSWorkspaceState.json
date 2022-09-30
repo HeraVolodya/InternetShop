@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DriveMoto",
+    "\\DriveMoto\\Services"
   ],
-  "SelectedNode": "\\DriveMoto.sln",
+  "SelectedNode": "\\DriveMoto\\Services\\UserService.cs",
   "PreviewInSolutionExplorer": false
 }

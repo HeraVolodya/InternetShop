@@ -1,10 +1,7 @@
 ﻿using DriveMoto.DataBase;
 using DriveMoto.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Net.Security;
 using AutoMapper;
 using DriveMoto.Models.DTOs;
 using DriveMoto.Models.AddRequest;
@@ -54,7 +51,6 @@ namespace DriveMoto.Controllers
             {
                 return BadRequest(e.Message);
             }
-
         }
         
         [HttpDelete("{id:Guid}")]

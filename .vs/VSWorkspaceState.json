@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\InternetShop_beckend",
+    "\\InternetShop_beckend\\DriveMoto",
+    "\\InternetShop_beckend\\DriveMoto\\Controllers",
+    "\\InternetShop_beckend\\DriveMoto\\Models"
+  ],
+  "SelectedNode": "\\InternetShop_beckend\\DriveMoto\\Controllers\\AuthController.cs",
+  "PreviewInSolutionExplorer": false
+}

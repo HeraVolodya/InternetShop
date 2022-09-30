@@ -7,8 +7,7 @@ namespace DriveMoto.Models
     {
         [Required]
         public Guid Id { get; set; }
-        [Required] //атрибут [Required] вказує на те що поля повині бути
-                   //обовязково заповненими
+        [Required] 
         public DateTimeOffset DataTime { get; set; } = DateTimeOffset.Now;
         [Required]
         public string? Name { get; set; }
