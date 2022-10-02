@@ -9,8 +9,8 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   //ПОМІНЯЙ any НА string !!!!!!!!!!!!!!!!!!1
-  singUp(userObj:any){
-    return this.http.post<any>(`${this.baseUrl}register`,userObj)
+  register(userObj:any){
+    return this.http.post<string>(`${this.baseUrl}register?`,userObj)
   }
 
   login(loginObj: any){
