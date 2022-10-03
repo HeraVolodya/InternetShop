@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   type: string = 'password';
   isText: boolean = false;
   loginForm!: FormGroup; 
-  constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {}
+  constructor(private readonly fb: FormBuilder, private readonly auth: AuthService, private readonly router: Router) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       this.auth.login(this.loginForm.value)
       .subscribe({
         next:(res) => {
-          alert(res.message);
+          //alert(res.message);
           this.loginForm.reset();
           this.router.navigate(['dashboard']);
         },

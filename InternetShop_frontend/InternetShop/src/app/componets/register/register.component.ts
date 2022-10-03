@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
-  constructor(private fb : FormBuilder, private auth: AuthService, private router: Router) { }
+  constructor(private readonly fb : FormBuilder, private readonly auth: AuthService, private readonly router: Router) { }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
