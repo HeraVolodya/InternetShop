@@ -1,6 +1,7 @@
 ﻿
 using InternetShop_beckend.Models;
 using InternetShop_beckend.Response;
+using Microsoft.AspNetCore.Mvc;
 
 namespace InternetShop_beckend.Services.Interfaces
 {
@@ -11,9 +12,5 @@ namespace InternetShop_beckend.Services.Interfaces
         Task<UserManagerResponse> LoginUserAsync(LoginModel model);
 
         Task<UserManagerResponse> ConfirmEmailAsync(string userId, string token);
-
-        //Task<UserManagerResponse> ForgetPasswordAsync(string email);
-
-        //Task<UserManagerResponse> ResetPasswordAsync(ResetPasswordModel model);
     }
 }

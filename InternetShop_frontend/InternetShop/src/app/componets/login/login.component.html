@@ -1,0 +1,12 @@
+<div>
+    <form [formGroup]="loginForm" action="">
+        <input formControlName = "email" type="text" placeholder="Email">
+        <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email is required</small>
+        <input formControlName = "password" type="text" placeholder="Password">
+        <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</small>
+        <button (click)="onLogin()" type="submit">Login</button>
+        <a href="" id="forget">Forget Password?</a>
+        <div>Do you whone register?<a href="" id="forget" routerLink="/register">Register</a></div>
+    </form>
+</div>
+

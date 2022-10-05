@@ -1,0 +1,14 @@
+<div>
+    <form [formGroup]="registerForm" action="">
+        <input formControlName="userName" type="text" placeholder="User Name">
+        <small *ngIf="registerForm.controls['userName'].dirty && registerForm.hasError('required','userName')">User name is required</small>
+        <input formControlName="email" type="text" placeholder="Email">
+        <small *ngIf="registerForm.controls['email'].dirty && registerForm.hasError('required','email')">Email is required</small>
+        <input formControlName="password" type="text" placeholder="Password">
+        <small *ngIf="registerForm.controls['password'].dirty && registerForm.hasError('required','password')">Password is required</small>
+        <input formControlName="confirmPassword" type="text" placeholder="Confirm Password">
+        <small *ngIf="registerForm.controls['confirmPassword'].dirty && registerForm.hasError('required','confirmPassword')">Confirm Password is required</small>
+        <button type="submit" (click)="onRegister()">Register</button>
+        <div>Arleady have account ?<a href="" id="forget" routerLink="/login">Login</a></div>
+    </form>
+</div>

@@ -78,7 +78,6 @@ namespace DriveMoto.Controllers
             {
                 return BadRequest(e.Message);
             }
-
         }
         
         [HttpDelete]
@@ -102,8 +101,6 @@ namespace DriveMoto.Controllers
             {
                 return BadRequest(e.Message);
             }
-            
         }
-
     }
 }
