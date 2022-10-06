@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Product } from 'src/app/models/product';
-import { ProductService } from 'src/app/services/product.service';
+import { Component, OnInit } from '@angular/core';
+import { ProductModel } from 'src/app/models/product-models/product-module';
+import { ProductsService } from 'src/app/services/product_services/products.service';
 
 @Component({
   selector: 'app-product',
@@ -8,33 +8,20 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  title = 'product';
-  products: Product[] = [];
-  productToEdit?: Product;
-  @Output() productsUpdated = new EventEmitter<Product[]>();
-  @Input() product?: Product;
 
-  constructor(private productService: ProductService) {
-    // this.productService
-    // .getProduct()
-    // .subscribe((result: Product[]) => (this.products = result))
-   }
+  products: ProductModel[] = [];
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    this.productService
-      .getProduct()
-      .subscribe((result: Product[]) => (this.products = result));
-  }
-
-  updateProductList(products: Product[]){
-    this.products = products;
-  }
-
-  initNewProduct(){
-    this.productToEdit = new Product();
-  }
-
-  editProduct(product: Product){
-    this.productToEdit = product;
+    this.productsService.getAllProduct()
+    .subscribe({
+      next: (products) => {
+        this.products = products;
+        console.log(products);
+      },
+      error: (ressponse) => {
+        console.log(ressponse)
+      }
+    });
   }
 }

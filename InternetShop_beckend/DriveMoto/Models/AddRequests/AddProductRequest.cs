@@ -14,13 +14,15 @@ namespace DriveMoto.Models.AddRequest
         public string? EngineCapacity { get; set; }
         [Required]
         public string? CarMileage { get; set; }
+        //[Required]
+        //public string? Year { get; set; }
+        //[Required]
+        //public string? Code { get; set; }
+        //[Required]
+        //public string? TypeCar { get; set; }
         [Required]
-        public int СodeProduct { get; set; }
+        public string? Price { get; set; }
         [Required]
-        public string? Сategory { get; set; }
-        [Required]
-        public double Price { get; set; }
-        [Required]
-        public double Discount { get; set; }
+        public string? Discount { get; set; }
     }
 }

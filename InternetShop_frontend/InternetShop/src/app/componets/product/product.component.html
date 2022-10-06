@@ -1,39 +1,37 @@
-<button (click)="initNewProduct()">Add a new car</button>
-<table>
-    <thead>
-      <th>id</th>
-      <th>dataTime</th>
-      <th>imageURL</th>
-      <th>nameAuto</th>
-      <th>model</th>
-      <th>engineCapacity</th>
-      <th>carMileage</th>
-      <th>codeProduct</th>
-      <th>category</th>
-      <th>price</th>
-      <th>discount</th>
-      <th></th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of products">
-        <td>{{product.id}}</td>
-        <td>{{product.dataTime}}</td>
-        <td>{{product.imageURL}}</td>
-        <td>{{product.nameAuto}}</td>
-        <td>{{product.model}}</td>
-        <td>{{product.engineCapacity}}</td>
-        <td>{{product.carMileage}}</td>
-        <td>{{product.codeProduct}}</td>
-        <td>{{product.category}}</td>
-        <td>{{product.price}}</td>
-        <td>{{product.discount}}</td>
-        <td><button (click)="editProduct(product)">Edit</button></td>
-      </tr>
-    </tbody>
-  </table>
+<table *ngIf="products">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Data Add</th>
+      <th>image</th>
+      <th>Car</th>
+      <th>Model</th>
+      <th>Engine Capacity</th>
+      <th>Car Mileage</th>
+      <th>Year</th>
+      <th>Code</th>
+      <th>Typr Car</th>
+      <th>Price</th>
+      <th>Discount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.dataTime }}</td>
+      <td>{{ product.imageURL }}</td>
+      <td>{{ product.nameAuto }}</td>
+      <td>{{ product.model }}</td>
+      <td>{{ product.engineCapacity }}</td>
+      <td>{{ product.carMileage }}</td>
+      <!-- <td>{{ product.year }}</td>
+      <td>{{ product.code }}</td>
+      <td>{{ product.typeCar }}</td> -->
+      <td>{{ product.price }}</td>
+      <td>{{ product.discount }}</td>
+    </tr>
+  </tbody>
+</table>
 
-  <app-edit-product 
-    [product] = "productToEdit"
-    (productsUpdated)="updateProductList($event)">
-  </app-edit-product>
+<p *ngIf="!products">No Cars Found</p>
 

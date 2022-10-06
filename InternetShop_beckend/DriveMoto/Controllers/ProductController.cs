@@ -41,8 +41,9 @@ namespace DriveMoto.Controllers
                     Model = addProductRequest.Model,
                     EngineCapacity = addProductRequest.EngineCapacity,
                     CarMileage = addProductRequest.CarMileage,
-                    СodeProduct = addProductRequest.СodeProduct,
-                    Сategory = addProductRequest.Сategory,
+                    //Year = addProductRequest.Year,
+                    //Code = addProductRequest.Code,
+                    //TypeCar = addProductRequest.TypeCar,
                     Price = addProductRequest.Price,
                     Discount = addProductRequest.Discount
 
@@ -71,8 +72,9 @@ namespace DriveMoto.Controllers
                     product.Model = updateProductRequest.Model;
                     product.EngineCapacity = updateProductRequest.EngineCapacity;
                     product.CarMileage = updateProductRequest.CarMileage;
-                    product.СodeProduct = updateProductRequest.СodeProduct;
-                    product.Сategory = updateProductRequest.Сategory;
+                    //product.Year = updateProductRequest.Year;
+                    //product.Code = updateProductRequest.Code;
+                    //product.TypeCar = updateProductRequest.TypeCar;
                     product.Price = updateProductRequest.Price;
                     product.Discount = updateProductRequest.Discount;
 

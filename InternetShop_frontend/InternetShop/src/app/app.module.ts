@@ -10,7 +10,8 @@ import { RegisterComponent } from './componets/register/register.component';
 import { DashboardComponent } from './componets/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductComponent } from './componets/product/product.component';
-import { EditProductComponent } from './componets/edit-product/edit-product.component';
+import { AddProductComponent } from './componets/product/add-product/add-product.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditProductComponent } from './componets/edit-product/edit-product.comp
     RegisterComponent,
     DashboardComponent,
     ProductComponent,
-    EditProductComponent
+    AddProductComponent,
+
   ],
   imports: [
     BrowserModule,
