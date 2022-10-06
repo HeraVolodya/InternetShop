@@ -4,11 +4,16 @@ namespace DriveMoto.Models.AddRequest
 {
     public class AddProductRequest
     {
-        [Required] //атрибут [Required] вказує на те що поля повині бути
-                   //обовязково заповненими
-        public string? Name { get; set; }
         [Required]
         public string? ImageURL { get; set; }
+        [Required]
+        public string? NameAuto { get; set; }
+        [Required]
+        public string? Model { get; set; }
+        [Required]
+        public string? EngineCapacity { get; set; }
+        [Required]
+        public string? CarMileage { get; set; }
         [Required]
         public int СodeProduct { get; set; }
         [Required]

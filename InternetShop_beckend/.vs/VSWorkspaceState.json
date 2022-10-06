@@ -5,6 +5,6 @@
     "\\DriveMoto\\Controllers",
     "\\DriveMoto\\Services"
   ],
-  "SelectedNode": "\\DriveMoto\\Program.cs",
+  "SelectedNode": "\\DriveMoto\\Controllers\\ProductController.cs",
   "PreviewInSolutionExplorer": false
 }

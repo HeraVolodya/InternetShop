@@ -6,6 +6,7 @@ using AutoMapper;
 using DriveMoto.Models.DTOs;
 using DriveMoto.Models.AddRequest;
 using DriveMoto.Models.UpdateRequests;
+using System.ComponentModel.DataAnnotations;
 
 namespace DriveMoto.Controllers
 {
@@ -24,10 +25,10 @@ namespace DriveMoto.Controllers
         }
 
          
-        [HttpGet]
+        [HttpGet("getProducts")]
         public async Task<IActionResult> GetProducts() => Ok(await _dbProducts.Products.ToListAsync());
         
-        [HttpPost]
+        [HttpPost("addProducts")]
         public async Task<IActionResult> AddProduct(AddProductRequest addProductRequest)
         {
             try
@@ -35,12 +36,16 @@ namespace DriveMoto.Controllers
                 var product = new Product()
                 {
                     Id = Guid.NewGuid(),
-                    Name = addProductRequest.Name,
                     ImageURL = addProductRequest.ImageURL,
+                    NameAuto = addProductRequest.NameAuto,
+                    Model = addProductRequest.Model,
+                    EngineCapacity = addProductRequest.EngineCapacity,
+                    CarMileage = addProductRequest.CarMileage,
                     СodeProduct = addProductRequest.СodeProduct,
                     Сategory = addProductRequest.Сategory,
                     Price = addProductRequest.Price,
                     Discount = addProductRequest.Discount
+
                 };
                 await _dbProducts.Products.AddAsync(product);
                 await _dbProducts.SaveChangesAsync();
@@ -53,8 +58,7 @@ namespace DriveMoto.Controllers
             }
         }
         
-        [HttpPut]
-        [Route("{id:guid}")]
+        [HttpPut("updateProducts")]
         public async Task<IActionResult> UpdateProduct([FromRoute] Guid id, UpdateProductRequest updateProductRequest)
         {
             try
@@ -62,8 +66,13 @@ namespace DriveMoto.Controllers
                 var product = await _dbProducts.Products.FindAsync(id);
                 if (product != null)
                 {
-                    product.Name = updateProductRequest.Name;
+                    product.ImageURL = updateProductRequest.ImageURL;
+                    product.NameAuto = updateProductRequest.NameAuto;
+                    product.Model = updateProductRequest.Model;
+                    product.EngineCapacity = updateProductRequest.EngineCapacity;
+                    product.CarMileage = updateProductRequest.CarMileage;
                     product.СodeProduct = updateProductRequest.СodeProduct;
+                    product.Сategory = updateProductRequest.Сategory;
                     product.Price = updateProductRequest.Price;
                     product.Discount = updateProductRequest.Discount;
 
@@ -92,7 +101,7 @@ namespace DriveMoto.Controllers
                 {
                     _dbProducts.Remove(product);
                     await _dbProducts.SaveChangesAsync();
-                    return Ok(NoContent);
+                    return Ok();
                 }
 
                 return NotFound();

@@ -99,17 +99,29 @@ namespace DriveMoto.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CarMileage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTimeOffset>("DataTime")
                         .HasColumnType("datetimeoffset");
 
                     b.Property<double>("Discount")
                         .HasColumnType("float");
 
+                    b.Property<string>("EngineCapacity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ImageURL")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Model")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameAuto")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
