@@ -1,0 +1,42 @@
+<div *ngIf = "product">
+    <h3>{{product.nameAuto}}</h3>
+    <div>
+      Image Url:
+      <input [(ngModel)] = "product.imageURL" placeholder="Image URL">
+    </div>
+    <div>
+      Name Auto:
+      <input [(ngModel)] = "product.nameAuto" placeholder="Name Auto">
+    </div>
+    <div>
+      Model:
+      <input [(ngModel)] = "product.model" placeholder="Model">
+    </div>
+    <div>
+      Engine Capacity:
+      <input [(ngModel)] = "product.engineCapacity" placeholder="Engine Capacity">
+    </div>
+    <div>
+      Car Mileage:
+      <input [(ngModel)] = "product.carMileage" placeholder="Car Mileage">
+    </div>
+    <div>
+      Code Product:
+      <input [(ngModel)] = "product.codeProduct" placeholder="Code Product">
+    </div>
+    <div>
+      Category:
+      <input [(ngModel)] = "product.category" placeholder="Category">
+    </div>
+    <div>
+      Price $:
+      <input [(ngModel)] = "product.price" placeholder="Price">
+    </div>
+    <div>
+      Discount $:
+      <input [(ngModel)] = "product.discount" placeholder="Discount">
+    </div>
+  </div>
+  <button (click)="updateProduct(product)" *ngIf="product">Save</button>
+  <button (click)="deleteProduct(product)" *ngIf="product">Delete</button>
+  <button (click)="createProduct(product)" *ngIf="product">Create</button>

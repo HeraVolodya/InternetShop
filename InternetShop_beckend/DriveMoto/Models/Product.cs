@@ -10,9 +10,15 @@ namespace DriveMoto.Models
         [Required] 
         public DateTimeOffset DataTime { get; set; } = DateTimeOffset.Now;
         [Required]
-        public string? Name { get; set; }
-        [Required]
         public string? ImageURL { get; set; }
+        [Required]
+        public string? NameAuto { get; set; }
+        [Required]
+        public string? Model { get; set; }
+        [Required]
+        public string? EngineCapacity { get; set; }
+        [Required]
+        public string? CarMileage { get; set; }
         [Required]
         public int СodeProduct { get; set; }
         [Required]

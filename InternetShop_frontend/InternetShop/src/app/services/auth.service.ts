@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http"
+import { HttpClient } from "@angular/common/http"
 import { Observable } from 'rxjs';
 import { RegisterClient } from '../models/register-client';
 import { LoginClient } from '../models/login-client';
@@ -8,14 +8,14 @@ import { LoginClient } from '../models/login-client';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl: string = "https://localhost:7122/api/Auth/"
+  private baseUrl: string = "https://localhost:7122/"
   constructor(private http: HttpClient) { }
 
-  register(userObj:RegisterClient):Observable<string>{
-    return this.http.post<string>(`${this.baseUrl}register?`,userObj)
+  register(userObj:RegisterClient):Observable<RegisterClient[]>{
+    return this.http.post<RegisterClient[]>(`${this.baseUrl}api/Auth/register?`,userObj)
   }
 
-  login(loginObj: LoginClient):Observable<string>{
-    return this.http.post<any>(`${this.baseUrl}login`,loginObj)
+  login(loginObj: LoginClient):Observable<LoginClient[]>{
+    return this.http.post<LoginClient[]>(`${this.baseUrl}api/Auth/login`,loginObj)
   }
 }

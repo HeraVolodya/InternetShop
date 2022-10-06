@@ -1,0 +1,39 @@
+<button (click)="initNewProduct()">Add a new car</button>
+<table>
+    <thead>
+      <th>id</th>
+      <th>dataTime</th>
+      <th>imageURL</th>
+      <th>nameAuto</th>
+      <th>model</th>
+      <th>engineCapacity</th>
+      <th>carMileage</th>
+      <th>codeProduct</th>
+      <th>category</th>
+      <th>price</th>
+      <th>discount</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.dataTime}}</td>
+        <td>{{product.imageURL}}</td>
+        <td>{{product.nameAuto}}</td>
+        <td>{{product.model}}</td>
+        <td>{{product.engineCapacity}}</td>
+        <td>{{product.carMileage}}</td>
+        <td>{{product.codeProduct}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.discount}}</td>
+        <td><button (click)="editProduct(product)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-edit-product 
+    [product] = "productToEdit"
+    (productsUpdated)="updateProductList($event)">
+  </app-edit-product>
+
