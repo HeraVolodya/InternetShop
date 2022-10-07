@@ -810,3 +810,5 @@ D:\backend\projects\InternetShop\InternetShop_beckend\DriveMoto\obj\Debug\net6.0
 D:\backend\projects\InternetShop\InternetShop_beckend\DriveMoto\obj\Debug\net6.0\DriveMoto.pdb
 D:\backend\projects\InternetShop\InternetShop_beckend\DriveMoto\obj\Debug\net6.0\DriveMoto.genruntimeconfig.cache
 D:\backend\projects\InternetShop\InternetShop_beckend\DriveMoto\obj\Debug\net6.0\ref\DriveMoto.dll
+D:\backend\projects\InternetShop\InternetShop_beckend\DriveMoto\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\backend\projects\InternetShop\InternetShop_beckend\DriveMoto\bin\Debug\net6.0\SolrNet.dll

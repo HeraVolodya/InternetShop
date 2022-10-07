@@ -11,6 +11,7 @@ import { DashboardComponent } from './componets/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductComponent } from './componets/product/product.component';
 import { AddProductComponent } from './componets/product/add-product/add-product.component';
+import { EditProductComponent } from './componets/product/edit-product/edit-product.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AddProductComponent } from './componets/product/add-product/add-product
     DashboardComponent,
     ProductComponent,
     AddProductComponent,
+    EditProductComponent,
 
   ],
   imports: [

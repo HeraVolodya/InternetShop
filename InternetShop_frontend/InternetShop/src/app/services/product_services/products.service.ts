@@ -23,4 +23,16 @@ export class ProductsService {
   addProduct(addProductRequest: AddProductModel): Observable<AddProductModel>{
     return this.http.post<AddProductModel>(this.baseApiUrl + 'Product/addProducts', addProductRequest)
   }
+
+  getProduct(id: string):Observable<ProductModel>{
+    return this.http.get<ProductModel>(this.baseApiUrl + 'Product/' + id);  
+  }
+
+  updateProduct(id: string, updateProduct: ProductModel):Observable<ProductModel>{
+    return this.http.put<ProductModel>(this.baseApiUrl + 'Product/' + id, updateProduct); 
+  }
+
+  deleteProduct(id: string):Observable<ProductModel>{
+    return this.http.delete<ProductModel>(this.baseApiUrl + 'Product/' + id); 
+  }
 }
