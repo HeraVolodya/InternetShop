@@ -6,7 +6,7 @@ using AutoMapper;
 using DriveMoto.Models.DTOs;
 using DriveMoto.Models.AddRequest;
 using DriveMoto.Models.UpdateRequests;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace DriveMoto.Controllers
 {
@@ -27,6 +27,29 @@ namespace DriveMoto.Controllers
          
         [HttpGet("getProducts")]
         public async Task<IActionResult> GetProducts() => Ok(await _dbProducts.Products.ToListAsync());
+
+        [HttpGet]
+        [Route("{id:Guid}")]
+        public async Task<IActionResult> GetProductById([FromRoute] Guid id)
+        {
+            try
+            {
+                var product =
+                await _dbProducts.Products.FirstOrDefaultAsync(x => x.Id == id);
+
+                if (product == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(product);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+
+        }
         
         [HttpPost("addProducts")]
         public async Task<IActionResult> AddProduct(AddProductRequest addProductRequest)
@@ -59,7 +82,8 @@ namespace DriveMoto.Controllers
             }
         }
         
-        [HttpPut("updateProducts")]
+        [HttpPut]
+        [Route("{id:Guid}")]
         public async Task<IActionResult> UpdateProduct([FromRoute] Guid id, UpdateProductRequest updateProductRequest)
         {
             try

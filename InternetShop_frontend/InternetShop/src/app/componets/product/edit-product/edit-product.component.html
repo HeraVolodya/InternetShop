@@ -1,0 +1,59 @@
+<div>
+    <h1>Add New Car</h1>
+    <form  #form = "ngForm" (ngSubmit)="updateProduct()">
+        <div class="mb-3">
+            <label for="id" class="form-label">Id</label>
+            <input type="text" class="form-control" id="id" readonly
+          name="id" [(ngModel)] = "productDetails.id">
+        </div>
+        <div class="mb-3">
+            <label for="imageUrl" class="form-label">ImageUrl</label>
+            <input type="text" class="form-control" id="imageUrl"
+          name="imageURL" [(ngModel)] = "productDetails.imageURL">
+        </div>
+        <div class="mb-3">
+            <label for="nameAuto" class="form-label">Car</label>
+            <input type="text" class="form-control" id="nameAuto"
+            name="nameAuto" [(ngModel)] = "productDetails.nameAuto">
+        </div>
+        <div class="mb-3">
+            <label for="model" class="form-label">Model</label>
+            <input type="text" class="form-control" id="model"
+            name="model" [(ngModel)] = "productDetails.model">
+        </div>
+        <div class="mb-3">
+            <label for="engineCapacity" class="form-label">Engine Capacity</label>
+            <input type="text" class="form-control" id="engineCapacity"
+            name="engineCapacity" [(ngModel)] = "productDetails.engineCapacity">
+        </div>
+        <div class="mb-3">
+            <label for="carMileage" class="form-label">Car Mileage</label>
+            <input type="text" class="form-control" id="carMileage"
+            name="carMileage" [(ngModel)] = "productDetails.carMileage">
+        </div>
+        <!-- <div class="mb-3">
+            <label for="codeProduct" class="form-label">Code Product</label>
+            <input type="text" class="form-control" id="codeProduct"
+            name="codeProduct" [(ngModel)] = "addProductRequest.codeProduct">
+        </div>
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" class="form-control" id="category"
+            name="category" [(ngModel)] = "addProductRequest.category">
+        </div> -->
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price"
+            name="price" [(ngModel)] = "productDetails.price">
+        </div>
+        <div class="mb-3">
+            <label for="discount" class="form-label">Discount</label>
+            <input type="text" class="form-control" id="discount"
+            name="discount" [(ngModel)] = "productDetails.discount">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button (click)="deleteProduct(productDetails.id)" type="button" class="btn btn-banger">Delete</button>
+      </form>
+</div>
+

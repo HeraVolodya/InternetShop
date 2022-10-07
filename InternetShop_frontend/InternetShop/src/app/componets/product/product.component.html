@@ -8,11 +8,12 @@
       <th>Model</th>
       <th>Engine Capacity</th>
       <th>Car Mileage</th>
-      <th>Year</th>
+      <!-- <th>Year</th>
       <th>Code</th>
-      <th>Typr Car</th>
+      <th>Typr Car</th> -->
       <th>Price</th>
       <th>Discount</th>
+      <th>Ediit_link</th>
     </tr>
   </thead>
   <tbody>
@@ -29,6 +30,7 @@
       <td>{{ product.typeCar }}</td> -->
       <td>{{ product.price }}</td>
       <td>{{ product.discount }}</td>
+      <td><a [routerLink]="['/product', 'edit', product.id]">View</a></td>
     </tr>
   </tbody>
 </table>

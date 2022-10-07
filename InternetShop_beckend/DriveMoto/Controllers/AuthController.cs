@@ -28,6 +28,7 @@ namespace InternetShop_beckend.Controllers
         [HttpGet("get")]
         public async Task<IActionResult> Get() => Ok(await _context.Users.ToListAsync());
 
+
         [HttpGet("get/id")]
         public async Task<IActionResult> Get(string id)
         {
