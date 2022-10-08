@@ -1,0 +1,23 @@
+<button [routerLink]="['/product/add']">Add Advertisement</button>
+<table *ngIf="advertisements">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Data Add</th>
+      <th>image</th>
+      <th>Text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let advertisement of advertisements">
+      <td>{{ advertisement.id }}</td>
+      <td>{{ advertisement.dataTime }}</td>
+      <td><img src="{{ advertisement.imageURL }}" alt="poster" width="90px" height="60px"></td> 
+      <td>{{ advertisement.text }}</td>
+      
+      <!-- <td><a [routerLink]="['/product', 'edit', product.id]">View</a></td> -->
+    </tr>
+  </tbody>
+</table>
+
+<p *ngIf="!advertisements">No Cars Found</p>

@@ -113,6 +113,7 @@ namespace InternetShop_beckend.Controllers
                 return BadRequest(e.Message);
             }
         }
+
         [HttpDelete]
         [Route("{id:guid}")]
         public async Task<IActionResult> DeleteClient([FromRoute] string id)

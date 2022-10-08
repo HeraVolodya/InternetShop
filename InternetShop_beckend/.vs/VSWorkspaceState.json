@@ -3,7 +3,9 @@
     "",
     "\\DriveMoto",
     "\\DriveMoto\\Controllers",
-    "\\DriveMoto\\Services"
+    "\\DriveMoto\\Services",
+    "\\DriveMoto\\Services\\Interfaces",
+    "\\DriveMoto\\Swashbuckle"
   ],
   "SelectedNode": "\\DriveMoto.sln",
   "PreviewInSolutionExplorer": false

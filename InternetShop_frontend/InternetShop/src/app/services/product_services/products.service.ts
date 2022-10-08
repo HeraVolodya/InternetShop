@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { ProductModel } from 'src/app/models/product-model';
+import { ProductModel } from 'src/app/models/product-models/product-model';
 import { AddProductModel } from 'src/app/models/product-models/add-product-model';
 
 

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AddProductModel } from 'src/app/models/product-models/add-product-model';
 import { ProductsService } from 'src/app/services/product_services/products.service';
 
+
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -16,9 +17,6 @@ export class AddProductComponent implements OnInit {
     model: '',
     engineCapacity: '',
     carMileage: '',
-    // year: '',
-    // code: '',
-    // typeCar: '',
     price: '',
     discount: '',
   };

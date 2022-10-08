@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductModel } from 'src/app/models/product-models/product-module';
+import { ProductModel } from 'src/app/models/product-models/product-model';
 import { ProductsService } from 'src/app/services/product_services/products.service';
 
 @Component({
@@ -18,9 +18,6 @@ export class EditProductComponent implements OnInit {
       model: '',
       engineCapacity: '',
       carMileage: '',
-      // year: '',
-      // code: '',
-      // typeCar: '',
       price: '',
       discount: '',
     };
