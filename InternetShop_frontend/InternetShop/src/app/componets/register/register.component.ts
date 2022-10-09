@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/services/user_services/auth.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+
   registerForm!: FormGroup;
   constructor(private readonly fb : FormBuilder, private readonly auth: AuthService, private readonly router: Router) { }
 

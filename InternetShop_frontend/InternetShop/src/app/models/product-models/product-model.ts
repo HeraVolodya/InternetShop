@@ -6,9 +6,8 @@ export interface ProductModel {
     model: string,
     engineCapacity: string,
     carMileage: string,
-    // year: string,
-    // code: string,
-    // typeCar: string,
+    year: string,
+    category: string,
     price: string,
     discount: string
 }

@@ -2,6 +2,7 @@
 using InternetShop_beckend.Models;
 using InternetShop_beckend.Services.Interfaces;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -89,6 +90,7 @@ namespace InternetShop_beckend.Controllers
 
             return BadRequest("Some properties are not valid");
         }
+
 
         // /api/auth/confirmemail?userid&token
         [HttpGet("ConfirmEmail")]

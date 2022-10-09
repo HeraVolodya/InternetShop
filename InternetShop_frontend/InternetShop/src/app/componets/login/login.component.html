@@ -1,5 +1,6 @@
 <div>
     <form [formGroup]="loginForm" action="">
+        
         <input formControlName = "email" type="text" placeholder="Email">
         <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email is required</small>
         <input formControlName = "password" type="text" placeholder="Password">

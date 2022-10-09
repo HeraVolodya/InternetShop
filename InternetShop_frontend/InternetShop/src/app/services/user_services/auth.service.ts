@@ -16,6 +16,7 @@ export class AuthService {
   }
 
   login(loginObj: LoginClient):Observable<LoginClient[]>{
-    return this.http.post<LoginClient[]>(`${this.baseUrl}api/Auth/login`,loginObj)
+    return this.http.post<LoginClient[]>(`${this.baseUrl}api/Auth/login`,loginObj,
+    )
   }
 }

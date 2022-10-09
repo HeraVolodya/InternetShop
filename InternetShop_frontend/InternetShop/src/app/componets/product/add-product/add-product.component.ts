@@ -17,6 +17,8 @@ export class AddProductComponent implements OnInit {
     model: '',
     engineCapacity: '',
     carMileage: '',
+    year: '',
+    category: '',
     price: '',
     discount: '',
   };

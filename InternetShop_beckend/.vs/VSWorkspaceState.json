@@ -7,6 +7,6 @@
     "\\DriveMoto\\Services\\Interfaces",
     "\\DriveMoto\\Swashbuckle"
   ],
-  "SelectedNode": "\\DriveMoto.sln",
+  "SelectedNode": "\\DriveMoto\\Controllers\\AdvertisementControler.cs",
   "PreviewInSolutionExplorer": false
 }

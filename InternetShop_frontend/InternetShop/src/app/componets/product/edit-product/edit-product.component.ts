@@ -18,6 +18,8 @@ export class EditProductComponent implements OnInit {
       model: '',
       engineCapacity: '',
       carMileage: '',
+      year: '',
+      category: '',
       price: '',
       discount: '',
     };
