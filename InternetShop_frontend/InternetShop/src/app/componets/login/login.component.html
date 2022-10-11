@@ -1,10 +1,20 @@
-<div>
+<div class="yp_login">
     <form [formGroup]="loginForm" action="">
-        
-        <input formControlName = "email" type="text" placeholder="Email">
-        <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email is required</small>
-        <input formControlName = "password" type="text" placeholder="Password">
-        <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</small>
+        <div>
+            <span class="fa fa-user yp_login_form_icon"></span>
+            <input formControlName = "email" type="text" placeholder="Email">
+            <div>
+                <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email is required</small>
+            </div>
+        </div>
+        <div>
+            <span class="fa fa-lock yp_login_form_icon"></span>
+            <input formControlName = "password" type="text" placeholder="Password">
+            <span (click)="hideShowPassword()" class="fa {{eyeIcon}}" id="yp_login_form_eye"></span>
+            <div>
+                <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</small>
+            </div>
+        </div> 
         <button (click)="onLogin()" type="submit">Login</button>
         <a href="" id="forget">Forget Password?</a>
         <div>Do you whone register?<a href="" id="forget" routerLink="/register">Register</a></div>

@@ -60,15 +60,12 @@ namespace DriveMoto.Controllers
                 {
                     Id = Guid.NewGuid(),
                     ImageURL = addProductRequest.ImageURL,
-                    NameAuto = addProductRequest.NameAuto,
+                    Producer = addProductRequest.Producer,
                     Model = addProductRequest.Model,
-                    EngineCapacity = addProductRequest.EngineCapacity,
-                    CarMileage = addProductRequest.CarMileage,
-                    Year = addProductRequest.Year,
-                    Category = addProductRequest.Category,
+                    Diagonal = addProductRequest.Diagonal,
+                    Camera = addProductRequest.Camera,
                     Price = addProductRequest.Price,
                     Discount = addProductRequest.Discount
-
                 };
                 await _dbProducts.Products.AddAsync(product);
                 await _dbProducts.SaveChangesAsync();
@@ -91,12 +88,10 @@ namespace DriveMoto.Controllers
                 if (product != null)
                 {
                     product.ImageURL = updateProductRequest.ImageURL;
-                    product.NameAuto = updateProductRequest.NameAuto;
+                    product.Producer = updateProductRequest.Producer;
                     product.Model = updateProductRequest.Model;
-                    product.EngineCapacity = updateProductRequest.EngineCapacity;
-                    product.CarMileage = updateProductRequest.CarMileage;
-                    product.Year = updateProductRequest.Year;
-                    product.Category = updateProductRequest.Category;
+                    product.Diagonal = updateProductRequest.Diagonal;
+                    product.Camera = updateProductRequest.Camera;
                     product.Price = updateProductRequest.Price;
                     product.Discount = updateProductRequest.Discount;
 

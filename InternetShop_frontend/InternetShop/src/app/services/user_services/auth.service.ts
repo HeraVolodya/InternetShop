@@ -12,11 +12,14 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   register(userObj:RegisterClient):Observable<RegisterClient[]>{
-    return this.http.post<RegisterClient[]>(`${this.baseUrl}api/Auth/register?`,userObj)
+    return this.http.post<RegisterClient[]>(`${this.baseUrl}api/Auth/register?`,userObj);
   }
 
-  login(loginObj: LoginClient):Observable<LoginClient[]>{
-    return this.http.post<LoginClient[]>(`${this.baseUrl}api/Auth/login`,loginObj,
-    )
+  // login(loginObj: LoginClient):Observable<LoginClient[]>{
+  //   return this.http.post<LoginClient[]>(`${this.baseUrl}api/Auth/login`,loginObj,
+  //   )
+  // }
+  login(loginObj: RegisterClient){
+    return this.http.post<any>(`${this.baseUrl}api/Auth/login?`,loginObj);
   }
 }

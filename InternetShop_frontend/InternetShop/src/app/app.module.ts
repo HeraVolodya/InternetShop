@@ -14,6 +14,7 @@ import { CommonModule } from "@angular/common";
 import { EditProductComponent } from "./componets/product/edit-product/edit-product.component";
 import { AdvertisingComponent } from './componets/advertising/advertising.component';
 import { CartComponent } from './componets/cart/cart.component';
+import { MatDialogModule } from '@angular/material/dialog'
 
 
 
@@ -40,6 +41,7 @@ import { CartComponent } from './componets/cart/cart.component';
     BrowserAnimationsModule,
     FormsModule,
     CommonModule,
+    MatDialogModule
     
   ],
   providers: [],

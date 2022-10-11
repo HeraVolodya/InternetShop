@@ -7,17 +7,13 @@ namespace DriveMoto.Models.UpdateRequests
         [Required]
         public string? ImageURL { get; set; }
         [Required]
-        public string? NameAuto { get; set; }
+        public string? Producer { get; set; }
         [Required]
         public string? Model { get; set; }
         [Required]
-        public string? EngineCapacity { get; set; }
+        public string? Diagonal { get; set; }
         [Required]
-        public string? CarMileage { get; set; }
-        [Required]
-        public string? Year { get; set; }
-        [Required]
-        public string? Category { get; set; }
+        public string? Camera { get; set; }
         [Required]
         public string? Price { get; set; }
         [Required]

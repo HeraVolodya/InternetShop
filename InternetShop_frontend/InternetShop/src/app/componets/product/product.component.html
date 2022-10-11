@@ -1,18 +1,16 @@
 <body class="product">
   
-<button class="product_btn" [routerLink]="['/product/add']">Add Car</button>
+<button class="product_btn" [routerLink]="['/product/add']">Add Phone</button>
 <table *ngIf="products">
   <thead>
     <tr>
       <th>Id</th>
       <th>Data Add</th>
       <th>image</th>
-      <th>Car</th>
+      <th>Producer</th>
       <th>Model</th>
-      <th>Engine Capacity</th>
-      <th>Car Mileage</th>
-      <th>Years Car</th>
-      <th>Type</th>
+      <th>Diagonal</th>
+      <th>Camera</th>
       <th>Price</th>
       <th>Discount</th>
       <th>Ediit_link</th>
@@ -22,13 +20,11 @@
     <tr *ngFor="let product of products">
       <td class="secondText">{{ product.id }}</td>
       <td class="secondText">{{ product.dataTime }}</td>
-      <td class="importantText"><img src="{{ product.imageURL }}" alt="car" width="90px" height="60px"></td> 
-      <td>{{ product.nameAuto }}</td>
+      <td class="importantText"><img src="{{ product.imageURL }}" alt="phone" width="90px" height="60px"></td> 
+      <td>{{ product.producer }}</td>
       <td>{{ product.model }}</td>
-      <td>{{ product.engineCapacity }}</td>
-      <td>{{ product.carMileage }}</td>
-      <td>{{ product.year }}</td>
-      <td>{{ product.category }}</td>
+      <td>{{ product.producer }}</td>
+      <td>{{ product.camera }}</td>
       <td>{{ product.price }}</td>
       <td>{{ product.discount }}</td>
       <td><a [routerLink]="['/product', 'edit', product.id]">View</a></td>

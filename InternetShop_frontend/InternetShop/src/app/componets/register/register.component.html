@@ -9,6 +9,6 @@
         <input formControlName="confirmPassword" type="text" placeholder="Confirm Password">
         <small *ngIf="registerForm.controls['confirmPassword'].dirty && registerForm.hasError('required','confirmPassword')">Confirm Password is required</small>
         <button type="submit" (click)="onRegister()">Register</button>
-        <div>Arleady have account ?<a href="" id="forget" routerLink="/login">Login</a></div>
+        <div>Arleady have account ?<a href="" id="forget" (click)="openDialogLogin()">Login</a></div>
     </form>
 </div>

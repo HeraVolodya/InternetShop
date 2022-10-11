@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import ValidateForm from 'src/app/helpers/validateform';
 import { AuthService } from 'src/app/services/user_services/auth.service';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +14,10 @@ import { AuthService } from 'src/app/services/user_services/auth.service';
 export class RegisterComponent implements OnInit {
 
   registerForm!: FormGroup;
-  constructor(private readonly fb : FormBuilder, private readonly auth: AuthService, private readonly router: Router) { }
+  constructor(private readonly fb : FormBuilder,
+     private readonly auth: AuthService,
+      private readonly router: Router,
+      private dialogRef: MatDialog) { }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -22,6 +27,7 @@ export class RegisterComponent implements OnInit {
       confirmPassword: ['',Validators.required]
     })
   }
+
   onRegister(){
     if(this.registerForm.valid){
       console.log(this.registerForm.value);
@@ -42,5 +48,9 @@ export class RegisterComponent implements OnInit {
       ValidateForm.validateAllFormFileds(this.registerForm);
       alert('Your form is invalid');
     }
+  }
+  
+  openDialogLogin(){
+    this.dialogRef.open(LoginComponent);
   }
 }

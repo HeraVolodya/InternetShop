@@ -2,12 +2,10 @@ export interface ProductModel {
     id: string,
     dataTime: string,
     imageURL: string,
-    nameAuto: string,
+    producer: string,
     model: string,
-    engineCapacity: string,
-    carMileage: string,
-    year: string,
-    category: string,
+    diagonal: string,
+    camera: string,
     price: string,
     discount: string
 }

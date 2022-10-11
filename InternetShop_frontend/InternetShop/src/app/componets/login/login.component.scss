@@ -1,0 +1,40 @@
+
+.yp_login{
+    width: 350px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../img/login_register.webp') 0 0 fixed no-repeat;
+    background-size: cover;
+    box-shadow:
+                    0 0 17px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 120px #0fa,
+                    0 0 80px #0fa,
+                    0 0 90px #0fa,
+                    0 0 10px #0fa,
+                    0 0 10px #0fa;
+
+    &_form{
+        width: 350px;
+        height: auto;
+        border: 1px solid red;
+        text-align: center;
+        position: relative;
+
+        &_input{
+            
+            background-color: #0fa;
+        }
+
+        &_icon{
+            position: absolute;
+        }
+        #yp_login_form_eye{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}

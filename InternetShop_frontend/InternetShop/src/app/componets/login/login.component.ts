@@ -4,6 +4,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import ValidateForm from 'src/app/helpers/validateform';
 import { Router } from '@angular/router';
 import { LoginClient } from 'src/app/models/user-models/login-client-model';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-login',
@@ -14,10 +16,14 @@ import { LoginClient } from 'src/app/models/user-models/login-client-model';
 })
 export class LoginComponent implements OnInit {
 
-  type: string = 'password';
+  type: string = "password";
   isText: boolean = false;
+  eyeIcon: string = "fa-eye-slash";
   loginForm!: FormGroup; 
-  constructor(private readonly fb: FormBuilder, private readonly auth: AuthService, private readonly router: Router) {}
+  constructor(private readonly fb: FormBuilder,
+     private readonly auth: AuthService,
+      private readonly router: Router,
+      private dialogRef: MatDialog) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -33,7 +39,7 @@ export class LoginComponent implements OnInit {
       this.auth.login(this.loginForm.value)
       .subscribe({
         next:(res) => {
-          //alert(res.message);
+          alert(res.message);
           this.loginForm.reset();
           this.router.navigate(['dashboard']);
         },
@@ -48,5 +54,14 @@ export class LoginComponent implements OnInit {
       ValidateForm.validateAllFormFileds(this.loginForm);
       alert('Your form is invalid');
     }
+  }
+  hideShowPassword(){
+    this.isText = !this.isText;
+    this.isText ? this.eyeIcon = "fa-eye" : this.eyeIcon = "fa-eye-slash"
+    this.isText ? this.type = "text" : this.type = "password";
+  }
+
+  openDialogRegister(){
+    this.dialogRef.open(RegisterComponent);
   }
 }

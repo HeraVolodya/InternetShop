@@ -1,1 +1,14 @@
-<p>dashboard works!</p>
+<div>
+    <ng-container *ngFor="let item of productList">
+        <div>
+           <img src="{{ item.imageURL }}" alt="phone" width="90px" height="60px"> 
+        </div>
+        <h5>{{item.producer}}</h5>
+        <p>{{item.model}}</p>
+        <p>{{item.diagonal}}</p>
+        <p>{{item.camera}}</p>
+        <p>{{item.price}}</p>
+        <p>{{item.discount}}</p>
+        <button>Add to cart</button>
+    </ng-container>
+</div>

@@ -1,7 +1,7 @@
-<body class="add_car">
-    <div class="add_car_input">
+<body class="add_phone">
+    <div class="add_phone_input">
         <div>
-            <h1>Add New Car</h1>
+            <h1>Add New Phone</h1>
             <form  (ngSubmit)="addProduct">
                 <div class="mb-3">
                     <label for="imageUrl" class="form-label">ImageUrl</label>
@@ -9,9 +9,9 @@
                   name="imageURL" [(ngModel)] = "addProductRequest.imageURL">
                 </div>
                 <div class="mb-3">
-                    <label for="nameAuto" class="form-label">Car</label>
-                    <input type="text" class="form-control" id="nameAuto"
-                    name="nameAuto" [(ngModel)] = "addProductRequest.nameAuto">
+                    <label for="producer" class="form-label">Producer</label>
+                    <input type="text" class="form-control" id="producer"
+                    name="producer" [(ngModel)] = "addProductRequest.producer">
                 </div>
                 <div class="mb-3">
                     <label for="model" class="form-label">Model</label>
@@ -19,14 +19,14 @@
                     name="model" [(ngModel)] = "addProductRequest.model">
                 </div>
                 <div class="mb-3">
-                    <label for="engineCapacity" class="form-label">Engine Capacity</label>
-                    <input type="text" class="form-control" id="engineCapacity"
-                    name="engineCapacity" [(ngModel)] = "addProductRequest.engineCapacity">
+                    <label for="diagonal" class="form-label">Diagonal</label>
+                    <input type="text" class="form-control" id="diagonal"
+                    name="diagonal" [(ngModel)] = "addProductRequest.diagonal">
                 </div>
                 <div class="mb-3">
-                    <label for="carMileage" class="form-label">Car Mileage</label>
-                    <input type="text" class="form-control" id="carMileage"
-                    name="carMileage" [(ngModel)] = "addProductRequest.carMileage">
+                    <label for="camera" class="form-label">Camera</label>
+                    <input type="text" class="form-control" id="camera"
+                    name="camera" [(ngModel)] = "addProductRequest.camera">
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Price</label>
@@ -43,5 +43,5 @@
               </form>
         </div>
     </div>
-    <div class="add_car_show"></div>
+    <div class="add_phone_show"></div>
 </body>

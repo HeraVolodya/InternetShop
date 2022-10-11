@@ -7,6 +7,6 @@
     "\\DriveMoto\\Services\\Interfaces",
     "\\DriveMoto\\Swashbuckle"
   ],
-  "SelectedNode": "\\DriveMoto\\Controllers\\AdvertisementControler.cs",
+  "SelectedNode": "\\DriveMoto\\Controllers\\AuthController.cs",
   "PreviewInSolutionExplorer": false
 }

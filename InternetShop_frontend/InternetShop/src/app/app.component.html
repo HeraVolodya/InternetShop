@@ -1,45 +1,44 @@
 <router-outlet>
-    <div class="dm">
-        <div class="dm_header">
-            <div class="dm_header_logo">
-                <p id="text">DriveMoto</p>
+    <div class="yp">
+        <div class="yp_header">
+            <div class="yp_header_logo">
+                <p id="text">YuPhone</p>
                 <p id="shadow">
-                    <span span id="glow">Drive</span><span id="blink">Moto</span>
+                    <span span id="glow">Yu</span><span id="blink">Phone</span>
                 </p>
             </div>
-            <div class="dm_header_btn">
-                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user-circle dm_header_btn_icon" aria-hidden="true"></i>
-                    <ul class="dropdown-menu dm_header_btn_dropdown-menu">
+            <div class="yp_header_btn">
+                <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user-circle yp_header_btn_icon" aria-hidden="true"></i>
+                    <ul class="dropdown-menu yp_header_btn_dropdown-menu">
                         <li><a class="" href="#">Clients</a></li>
                         <li><a class="" routerLink="Product">Products</a></li>
                         <li><a class="" href="#">Advertisement</a></li>
                       </ul>
                     </a>
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user dm_header_btn_icon" aria-hidden="true">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user yp_header_btn_icon" aria-hidden="true">
                     <ul class="dropdown-menu dropdown-menu-dark">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                       </ul>
                 </i></a>
-                <a><i class="fa fa-heart dm_header_btn_icon" aria-hidden="true"></i></a>
-                <a><i class="fa fa-shopping-cart dm_header_btn_icon" aria-hidden="true">
-                    <div style="font-size: 25px;" class="badge bg-danger dm_header_btn_icon_label">5</div>
+                <a><i class="fa fa-heart yp_header_btn_icon" aria-hidden="true"></i></a>
+                <a><i class="fa fa-shopping-cart yp_header_btn_icon" aria-hidden="true">
+                    <div style="font-size: 25px;" class="badge bg-danger yp_header_btn_icon_label">5</div>
                 </i>
                 </a>
                 
 
-                <button class="dm_header_btn_login" routerLink="login">Login/Register</button>
+                <button class="yp_header_btn_login" (click)="openDialogLogin()">Login/Register</button> 
+                <!-- routerLink="login" -->
             </div>
         </div>
-        <div class="dm_nav">
-            <div class="dm_nav_link">Sedan</div>
-            <div class="dm_nav_link">Station wagon</div>
-            <div class="dm_nav_link">Hatchback</div>
-            <div class="dm_nav_link">Minivan</div>
-            <div class="dm_nav_link">SUV</div>
-            <div class="dm_nav_link">Pickup</div>
+        <div class="yp_nav">
+            <div class="yp_nav_link">All</div>
+            <div class="yp_nav_link">iPhone</div>
+            <div class="yp_nav_link">Samsung</div>
+            <div class="yp_nav_link">Huawei</div>
+            <div class="yp_nav_link">Xiaomi </div>
         </div>
-
     </div>
 </router-outlet>

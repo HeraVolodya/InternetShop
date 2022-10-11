@@ -1,5 +1,5 @@
 <div>
-    <h1>Add New Car</h1>
+    <h1>Add New Phone</h1>
     <form  #form = "ngForm" (ngSubmit)="updateProduct()">
         <div class="mb-3">
             <label for="id" class="form-label">Id</label>
@@ -12,9 +12,9 @@
           name="imageURL" [(ngModel)] = "productDetails.imageURL">
         </div>
         <div class="mb-3">
-            <label for="nameAuto" class="form-label">Car</label>
-            <input type="text" class="form-control" id="nameAuto"
-            name="nameAuto" [(ngModel)] = "productDetails.nameAuto">
+            <label for="producer" class="form-label">Producer</label>
+            <input type="text" class="form-control" id="nproducer"
+            name="producer" [(ngModel)] = "productDetails.producer">
         </div>
         <div class="mb-3">
             <label for="model" class="form-label">Model</label>
@@ -22,14 +22,14 @@
             name="model" [(ngModel)] = "productDetails.model">
         </div>
         <div class="mb-3">
-            <label for="engineCapacity" class="form-label">Engine Capacity</label>
-            <input type="text" class="form-control" id="engineCapacity"
-            name="engineCapacity" [(ngModel)] = "productDetails.engineCapacity">
+            <label for="diagonal" class="form-label">Diagonal</label>
+            <input type="text" class="form-control" id="diagonal"
+            name="diagonal" [(ngModel)] = "productDetails.diagonal">
         </div>
         <div class="mb-3">
-            <label for="carMileage" class="form-label">Car Mileage</label>
-            <input type="text" class="form-control" id="carMileage"
-            name="carMileage" [(ngModel)] = "productDetails.carMileage">
+            <label for="camera" class="form-label">Camera</label>
+            <input type="text" class="form-control" id="camera"
+            name="camera" [(ngModel)] = "productDetails.camera">
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>

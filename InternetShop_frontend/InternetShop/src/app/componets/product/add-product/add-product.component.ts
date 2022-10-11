@@ -13,12 +13,10 @@ export class AddProductComponent implements OnInit {
 
   addProductRequest: AddProductModel = {
     imageURL: '',
-    nameAuto: '',
+    producer: '',
     model: '',
-    engineCapacity: '',
-    carMileage: '',
-    year: '',
-    category: '',
+    diagonal: '',
+    camera: '',
     price: '',
     discount: '',
   };
