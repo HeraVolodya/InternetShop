@@ -20,6 +20,7 @@ export class AddProductComponent implements OnInit {
     price: '',
     discount: '',
   };
+  
   constructor(private productsService: ProductsService, private router: Router) { }
 
   ngOnInit(): void {
@@ -28,7 +29,7 @@ export class AddProductComponent implements OnInit {
     this.productsService.addProduct(this.addProductRequest)
     .subscribe({
       next: (product) => {
-        this.router.navigate(['Product']);
+        this.router.navigate(['/Product']);
         console.log(product)
       }
     });

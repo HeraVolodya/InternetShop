@@ -1,50 +1,84 @@
-<div>
-    <h1>Add New Phone</h1>
-    <form  #form = "ngForm" (ngSubmit)="updateProduct()">
-        <div class="mb-3">
-            <label for="id" class="form-label">Id</label>
-            <input type="text" class="form-control" id="id" readonly
-          name="id" [(ngModel)] = "productDetails.id">
+<div class="edit_product">
+    <div class="edit_product_form">
+        <h1>Add New Phone</h1>
+        <form  #form = "ngForm" (ngSubmit)="updateProduct()">
+            <div>
+                <span>Id</span>
+                <input type="text" class="form-control" id="id" readonly
+              name="id" [(ngModel)] = "productDetails.id">
+            </div>
+            <div class="mb-3">
+                <span>ImageUrl</span>
+                <input type="text" class="form-control" id="imageUrl"
+              name="imageURL" [(ngModel)] = "productDetails.imageURL">
+            </div>
+            <div class="mb-3">
+                <span>Producer</span>
+                <input type="text" class="form-control" id="nproducer"
+                name="producer" [(ngModel)] = "productDetails.producer">
+            </div>
+            <div class="mb-3">
+                <span>Model</span>
+                <input type="text" class="form-control" id="model"
+                name="model" [(ngModel)] = "productDetails.model">
+            </div>
+            <div class="mb-3">
+                <span>Diagonal</span>
+                <input type="text" class="form-control" id="diagonal"
+                name="diagonal" [(ngModel)] = "productDetails.diagonal">
+            </div>
+            <div class="mb-3">
+                <span>Camera</span>
+                <input type="text" class="form-control" id="camera"
+                name="camera" [(ngModel)] = "productDetails.camera">
+            </div>
+            <div class="mb-3">
+                <span>Price</span>
+                <input type="text" class="form-control" id="price"
+                name="price" [(ngModel)] = "productDetails.price">
+            </div>
+            <div class="mb-3">
+                <span>Discount</span>
+                <input type="text" class="form-control" id="discount"
+                name="discount" [(ngModel)] = "productDetails.discount">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            <button (click)="deleteProduct(productDetails.id)" type="button" class="btn" id="delete">Delete</button>
+          </form>
+    </div>
+    <div class="edit_product_card">
+        <div class="card" style="width: 12rem;">
+            <img src="{{ productDetails.imageURL }}" class="card-img-top" alt="phone" height="220px">
+            <div class="card-body">
+                <h2 class="card-title">{{ productDetails.producer }}</h2>
+                <p class="card-text">{{ productDetails.model }}</p>
+                <h3 class="card-title">Price: {{ productDetails.price }}$</h3>
+                <h6 class="card-title">Discount: {{ productDetails.discount }}%</h6>
+                <div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Characteristics
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div></div>
+                                <div>Diagonal is - {{ productDetails.diagonal }}"</div>
+                                <div>Camera pixels is - {{ productDetails.camera }} Mp</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="imageUrl" class="form-label">ImageUrl</label>
-            <input type="text" class="form-control" id="imageUrl"
-          name="imageURL" [(ngModel)] = "productDetails.imageURL">
-        </div>
-        <div class="mb-3">
-            <label for="producer" class="form-label">Producer</label>
-            <input type="text" class="form-control" id="nproducer"
-            name="producer" [(ngModel)] = "productDetails.producer">
-        </div>
-        <div class="mb-3">
-            <label for="model" class="form-label">Model</label>
-            <input type="text" class="form-control" id="model"
-            name="model" [(ngModel)] = "productDetails.model">
-        </div>
-        <div class="mb-3">
-            <label for="diagonal" class="form-label">Diagonal</label>
-            <input type="text" class="form-control" id="diagonal"
-            name="diagonal" [(ngModel)] = "productDetails.diagonal">
-        </div>
-        <div class="mb-3">
-            <label for="camera" class="form-label">Camera</label>
-            <input type="text" class="form-control" id="camera"
-            name="camera" [(ngModel)] = "productDetails.camera">
-        </div>
-        <div class="mb-3">
-            <label for="price" class="form-label">Price</label>
-            <input type="text" class="form-control" id="price"
-            name="price" [(ngModel)] = "productDetails.price">
-        </div>
-        <div class="mb-3">
-            <label for="discount" class="form-label">Discount</label>
-            <input type="text" class="form-control" id="discount"
-            name="discount" [(ngModel)] = "productDetails.discount">
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button (click)="deleteProduct(productDetails.id)" type="button" class="btn btn-banger">Delete</button>
-      </form>
+    </div>
 </div>
+
+
+
 
 

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AdvertisementModel } from 'src/app/models/advertisement-models/advertisement-model';
+import { MatDialog } from '@angular/material/dialog';
+import { AdvertisementModel } from 'src/app/models/advertisements/advertisement-model';
+
 import { AdvertisementService } from 'src/app/services/advertisement_services/advertisement.service';
+import { AddAdvertisingComponent } from './add-advertising/add-advertising/add-advertising.component';
 
 @Component({
   selector: 'app-advertising',
@@ -10,7 +13,8 @@ import { AdvertisementService } from 'src/app/services/advertisement_services/ad
 export class AdvertisingComponent implements OnInit {
 
   advertisements: AdvertisementModel[] = [];
-  constructor(private advertisementService: AdvertisementService) { 
+  constructor(private advertisementService: AdvertisementService,
+              private dialogRef: MatDialog) { 
 
   }
 
@@ -26,5 +30,9 @@ export class AdvertisingComponent implements OnInit {
       }
     });
   }
+  openDialogAddAdvertisement(){
+    this.dialogRef.open(AddAdvertisingComponent);
+  }
+
 
 }

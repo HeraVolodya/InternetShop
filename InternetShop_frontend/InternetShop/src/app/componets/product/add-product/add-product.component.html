@@ -1,47 +1,89 @@
-<body class="add_phone">
-    <div class="add_phone_input">
+<body class="add">
+    <div class="add_phone">
         <div>
             <h1>Add New Phone</h1>
-            <form  (ngSubmit)="addProduct">
-                <div class="mb-3">
-                    <label for="imageUrl" class="form-label">ImageUrl</label>
-                    <input type="text" class="form-control" id="imageUrl"
-                  name="imageURL" [(ngModel)] = "addProductRequest.imageURL">
+                <form class="add_phone_form" (ngSubmit)="addProduct">
+                    <div class="add_phone_form_conteiner">
+                        <div class="mb-3">
+                            <input class="add_phone_form_conteiner_input" 
+                            type="text" id="imageUrl"
+                            name="imageURL" [(ngModel)] = "addProductRequest.imageURL"
+                            placeholder="ImageUrl">
+                        </div>
+                        <div class="mb-3">
+                            
+                            <input class="add_phone_form_conteiner_input" 
+                            type="text" id="producer"
+                            name="producer" [(ngModel)] = "addProductRequest.producer"
+                            placeholder="Producer">
+                        </div>
+                        <div class="mb-3">
+                            
+                            <input class="add_phone_form_conteiner_input"
+                            type="text" id="model"
+                            name="model" [(ngModel)] = "addProductRequest.model"
+                            placeholder="Model">
+                        </div>
+                        <div class="mb-3">
+                            
+                            <input class="add_phone_form_conteiner_input"
+                            type="text" id="diagonal"
+                            name="diagonal" [(ngModel)] = "addProductRequest.diagonal"
+                            placeholder="Diagonal">
+                        </div>
+                        </div>
+                    <div class="add_phone_form_conteiner">
+                        <div class="mb-3">
+                            <input class="add_phone_form_conteiner_input"
+                            type="text" id="camera"
+                            name="camera" [(ngModel)] = "addProductRequest.camera"
+                            placeholder="Camera">
+                        </div>
+                        <div class="mb-3">
+                            
+                            <input class="add_phone_form_conteiner_input"
+                            type="text" id="price"
+                            name="price" [(ngModel)] = "addProductRequest.price"
+                            placeholder="Price">
+                        </div>
+                        <div class="mb-3">
+                            <input class="add_phone_form_conteiner_input"
+                            type="text" id="discount"
+                            name="discount" [(ngModel)] = "addProductRequest.discount"
+                            placeholder="Discount">
+                        </div>
+                        <button (click)="addProduct()" type="submit" class="btn btn-primary" [routerLink]="['/Product']">Submit</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+    <div class="add_phone_card">
+        <div class="card" style="width: 12rem;">
+            <img src="{{ addProductRequest.imageURL }}" class="card-img-top" alt="phone" height="220px">
+            <div class="card-body">
+                <h2 class="card-title">{{ addProductRequest.producer }}</h2>
+                <p class="card-text">{{ addProductRequest.model }}</p>
+                <h3 class="card-title">Price: {{ addProductRequest.price }}$</h3>
+                <h6 class="card-title">Discount: {{ addProductRequest.discount }}%</h6>
+                <div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Characteristics
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div></div>
+                                <div>Diagonal is - {{ addProductRequest.diagonal }}"</div>
+                                <div>Camera pixels is - {{ addProductRequest.camera }} Mp</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
-                <div class="mb-3">
-                    <label for="producer" class="form-label">Producer</label>
-                    <input type="text" class="form-control" id="producer"
-                    name="producer" [(ngModel)] = "addProductRequest.producer">
-                </div>
-                <div class="mb-3">
-                    <label for="model" class="form-label">Model</label>
-                    <input type="text" class="form-control" id="model"
-                    name="model" [(ngModel)] = "addProductRequest.model">
-                </div>
-                <div class="mb-3">
-                    <label for="diagonal" class="form-label">Diagonal</label>
-                    <input type="text" class="form-control" id="diagonal"
-                    name="diagonal" [(ngModel)] = "addProductRequest.diagonal">
-                </div>
-                <div class="mb-3">
-                    <label for="camera" class="form-label">Camera</label>
-                    <input type="text" class="form-control" id="camera"
-                    name="camera" [(ngModel)] = "addProductRequest.camera">
-                </div>
-                <div class="mb-3">
-                    <label for="price" class="form-label">Price</label>
-                    <input type="text" class="form-control" id="price"
-                    name="price" [(ngModel)] = "addProductRequest.price">
-                </div>
-                <div class="mb-3">
-                    <label for="discount" class="form-label">Discount</label>
-                    <input type="text" class="form-control" id="discount"
-                    name="discount" [(ngModel)] = "addProductRequest.discount">
-                </div>
-                
-                <button (click)="addProduct()" type="submit" class="btn btn-primary">Submit</button>
-              </form>
+            </div>
         </div>
     </div>
-    <div class="add_phone_show"></div>
 </body>

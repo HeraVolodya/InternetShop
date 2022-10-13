@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { AddAdvertisingComponent } from "./componets/advertising/add-advertising/add-advertising/add-advertising.component";
 import { AdvertisingComponent } from "./componets/advertising/advertising.component";
+import { EditAdvertisingComponent } from "./componets/advertising/edit-advertising/edit-advertising/edit-advertising.component";
 import { DashboardComponent } from "./componets/dashboard/dashboard.component";
 import { LoginComponent } from "./componets/login/login.component";
 import { AddProductComponent } from "./componets/product/add-product/add-product.component";
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path: 'product/add', component: AddProductComponent},
   {path: 'product/edit/:id', component: EditProductComponent},
 
-  {path: 'advertising', component: AdvertisingComponent}
+  {path: 'advertisement', component: AdvertisingComponent},
+  {path: 'advertisement/add', component: AddAdvertisingComponent},
+  {path: 'advertisement/edit/:id', component: EditAdvertisingComponent}
 
 
 

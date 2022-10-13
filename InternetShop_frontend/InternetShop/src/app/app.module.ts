@@ -14,7 +14,9 @@ import { CommonModule } from "@angular/common";
 import { EditProductComponent } from "./componets/product/edit-product/edit-product.component";
 import { AdvertisingComponent } from './componets/advertising/advertising.component';
 import { CartComponent } from './componets/cart/cart.component';
-import { MatDialogModule } from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog';
+import { AddAdvertisingComponent } from './componets/advertising/add-advertising/add-advertising/add-advertising.component';
+import { EditAdvertisingComponent } from './componets/advertising/edit-advertising/edit-advertising/edit-advertising.component'
 
 
 
@@ -32,6 +34,8 @@ import { MatDialogModule } from '@angular/material/dialog'
     EditProductComponent,
     AdvertisingComponent,
     CartComponent,
+    AddAdvertisingComponent,
+    EditAdvertisingComponent,
   ],
   imports: [
     BrowserModule,

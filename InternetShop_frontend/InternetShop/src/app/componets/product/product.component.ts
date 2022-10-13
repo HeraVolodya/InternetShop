@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ProductModel } from 'src/app/models/product-models/product-model';
 import { ProductsService } from 'src/app/services/product_services/products.service';
+import { AddProductComponent } from './add-product/add-product.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 
 @Component({
@@ -11,7 +14,8 @@ import { ProductsService } from 'src/app/services/product_services/products.serv
 export class ProductComponent implements OnInit {
 
   products: ProductModel[] = [];
-  constructor(private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService,
+    private dialogRef: MatDialog) { }
 
   ngOnInit(): void {
     this.productsService.getAllProduct()
@@ -24,5 +28,9 @@ export class ProductComponent implements OnInit {
         console.log(ressponse)
       }
     });
+  }
+
+  openDialogAddProduct(){
+    this.dialogRef.open(AddProductComponent);
   }
 }

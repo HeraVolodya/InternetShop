@@ -1,23 +1,26 @@
-<button [routerLink]="['/product/add']">Add Advertisement</button>
-<table *ngIf="advertisements">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Data Add</th>
-      <th>image</th>
-      <th>Text</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let advertisement of advertisements">
-      <td>{{ advertisement.id }}</td>
-      <td>{{ advertisement.dataTime }}</td>
-      <td><img src="{{ advertisement.imageURL }}" alt="poster" width="90px" height="60px"></td> 
-      <td>{{ advertisement.text }}</td>
-      
-      <!-- <td><a [routerLink]="['/product', 'edit', product.id]">View</a></td> -->
-    </tr>
-  </tbody>
-</table>
-
-<p *ngIf="!advertisements">No Cars Found</p>
+<body>
+  <button class="advertisement_btn" (click)="openDialogAddAdvertisement()">Add Advertisement</button>
+  <!-- [routerLink]="['/product/add']" -->
+  <table *ngIf="advertisements">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Data Add</th>
+        <th>image</th>
+        <th>Text</th>
+        <th>Ediit_link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let advertisement of advertisements">
+        <td class="secondText">{{ advertisement.id }}</td>
+        <td class="secondText">{{ advertisement.dataTime }}</td>
+        <td class="importantText"><img src="{{ advertisement.imageURL }}" alt="poster" width="90px" height="60px"></td> 
+        <td class="importantText" >{{ advertisement.text }}</td>
+        <td><a id="edit" [routerLink]="['/advertisement', 'edit', advertisement.id]">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <p *ngIf="!advertisements">No Cars Found</p>
+</body>

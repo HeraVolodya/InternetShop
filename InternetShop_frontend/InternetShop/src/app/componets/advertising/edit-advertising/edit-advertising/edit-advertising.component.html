@@ -1,0 +1,39 @@
+<div class="edit_product">
+    <div class="edit_product_form">
+        <h1>Add New Phone</h1>
+        <form  #form = "ngForm" (ngSubmit)="updateAdvertisement()">
+            <div>
+                <span>Id</span>
+                <input type="text" class="form-control" id="id" readonly
+              name="id" [(ngModel)] = "advertisementDetails.id">
+            </div>
+            <div class="mb-3">
+                <span>ImageUrl</span>
+                <input type="text" class="form-control" id="imageUrl"
+              name="imageURL" [(ngModel)] = "advertisementDetails.imageURL">
+            </div>
+            <div class="mb-3">
+                <span>Producer</span>
+                <input type="text" class="form-control" id="nproducer"
+                name="producer" [(ngModel)] = "advertisementDetails.text">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            <button (click)="deleteAdvertisement(advertisementDetails.id)" type="button" class="btn" id="delete">Delete</button>
+          </form>
+    </div>
+    <div class="edit_product_card">
+        <div class="card" style="width: 12rem;">
+            <img src="{{ advertisementDetails.imageURL }}" class="card-img-top" alt="phone" height="220px">
+            <div class="card-body">
+                <h2 class="card-title">{{  advertisementDetails.text }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

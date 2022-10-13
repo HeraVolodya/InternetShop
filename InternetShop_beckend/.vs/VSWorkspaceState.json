@@ -3,10 +3,9 @@
     "",
     "\\DriveMoto",
     "\\DriveMoto\\Controllers",
-    "\\DriveMoto\\Services",
-    "\\DriveMoto\\Services\\Interfaces",
+    "\\DriveMoto\\Models",
     "\\DriveMoto\\Swashbuckle"
   ],
-  "SelectedNode": "\\DriveMoto\\Controllers\\AuthController.cs",
+  "SelectedNode": "\\DriveMoto\\Controllers\\ProductController.cs",
   "PreviewInSolutionExplorer": false
 }

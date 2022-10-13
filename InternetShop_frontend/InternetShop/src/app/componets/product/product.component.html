@@ -1,38 +1,38 @@
-<body class="product">
-  
-<button class="product_btn" [routerLink]="['/product/add']">Add Phone</button>
-<table *ngIf="products">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Data Add</th>
-      <th>image</th>
-      <th>Producer</th>
-      <th>Model</th>
-      <th>Diagonal</th>
-      <th>Camera</th>
-      <th>Price</th>
-      <th>Discount</th>
-      <th>Ediit_link</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of products">
-      <td class="secondText">{{ product.id }}</td>
-      <td class="secondText">{{ product.dataTime }}</td>
-      <td class="importantText"><img src="{{ product.imageURL }}" alt="phone" width="90px" height="60px"></td> 
-      <td>{{ product.producer }}</td>
-      <td>{{ product.model }}</td>
-      <td>{{ product.producer }}</td>
-      <td>{{ product.camera }}</td>
-      <td>{{ product.price }}</td>
-      <td>{{ product.discount }}</td>
-      <td><a [routerLink]="['/product', 'edit', product.id]">View</a></td>
-    </tr>
-  </tbody>
-</table>
+<body>
+  <div class="product">
+  <button class="product_btn" (click)="openDialogAddProduct()">Add Phone</button>
+    <table *ngIf="products">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Data Add</th>
+          <th>image</th>
+          <th>Producer</th>
+          <th>Model</th>
+          <th>Diagonal</th>
+          <th>Camera</th>
+          <th>Price</th>
+          <th>Discount</th>
+          <th>Ediit_link</th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td class="secondText">{{ product.id }}</td>
+        <td class="secondText">{{ product.dataTime }}</td>
+        <td class="importantText"><img src="{{ product.imageURL }}" alt="phone" width="75px" height="90px"></td> 
+        <td>{{ product.producer }}</td>
+        <td>{{ product.model }}</td>
+        <td>{{ product.producer }}</td>
+        <td>{{ product.camera }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.discount }}</td>
+        <td><a id="edit" [routerLink]="['/product', 'edit', product.id]">View</a></td>
+      </tr>
+    </tbody>
+  </table>
 
-<p *ngIf="!products">No Cars Found</p>
+<p *ngIf="!products">No Phones Found</p>
 
-
+</div>
 </body>

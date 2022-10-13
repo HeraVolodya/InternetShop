@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AdvertisementModel } from 'src/app/models/advertisement-models/advertisement-model';
+import { AdvertisementModel } from 'src/app/models/advertisements/advertisement-model';
+
 import { environment } from 'src/environments/environment';
 
 @Injectable({
