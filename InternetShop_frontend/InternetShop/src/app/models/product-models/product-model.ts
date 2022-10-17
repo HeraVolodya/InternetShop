@@ -1,4 +1,5 @@
 export interface ProductModel {
+[x: string]: any;
     id: string,
     dataTime: string,
     imageURL: string,
