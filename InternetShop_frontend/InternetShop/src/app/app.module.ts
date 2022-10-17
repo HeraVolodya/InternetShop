@@ -16,7 +16,8 @@ import { AdvertisingComponent } from './componets/advertising/advertising.compon
 import { CartComponent } from './componets/cart/cart.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AddAdvertisingComponent } from './componets/advertising/add-advertising/add-advertising/add-advertising.component';
-import { EditAdvertisingComponent } from './componets/advertising/edit-advertising/edit-advertising/edit-advertising.component'
+import { EditAdvertisingComponent } from './componets/advertising/edit-advertising/edit-advertising/edit-advertising.component';
+import { FilterPipe } from './shared/filter.pipe'
 
 
 
@@ -36,6 +37,7 @@ import { EditAdvertisingComponent } from './componets/advertising/edit-advertisi
     CartComponent,
     AddAdvertisingComponent,
     EditAdvertisingComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

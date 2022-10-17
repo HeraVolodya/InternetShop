@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AdvertisementModel } from './models/advertisements/advertisement-model';
+import { ProductModel } from './models/product-models/product-model';
 import { AdvertisementService } from './services/advertisement_services/advertisement.service';
 
 import { CartService } from './services/cart/cart.service';
@@ -13,6 +14,8 @@ import { CartService } from './services/cart/cart.service';
 export class AppComponent {
   title = 'InternetShop';
 
+  public filterProducer : any;
+  public productList: ProductModel[] = [];
   public totalItem : number = 0;
   advertisements: AdvertisementModel[] = [];
   constructor(

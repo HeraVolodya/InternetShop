@@ -1,8 +1,25 @@
+<div class="yp_nav">
+    <a (click)="filter('')">
+        <div class="yp_nav_link">All</div>
+    </a>
+    <a (click)="filter('Apple')">
+        <div class="yp_nav_link">Apple</div>
+    </a>
+    <a (click)="filter('Samsung')">
+        <div class="yp_nav_link">Samsung</div>
+    </a>   
+    <a (click)="filter('Huawei')">
+        <div class="yp_nav_link">Huawei</div> 
+    </a>
+    <a (click)="filter('Xiaomi')">
+        <div class="yp_nav_link">Xiaomi</div>
+    </a>
+</div>
 <body class="dashboard">
     <div>
         <div class="container">
             <div class="row">
-                <ng-container *ngFor = "let item of productList">
+                <ng-container *ngFor = "let item of filterProducer">
                     <div class="card col-md-3">
                         <img class="picture" src="{{ item.imageURL }}" alt="phone"> 
                         <h2 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.producer}}</h2>

@@ -21,8 +21,6 @@ export class LoginComponent implements OnInit {
   isText: boolean = false;
   eyeIcon: string = "fa-eye-slash";
   loginForm!: FormGroup; 
-  helper = new JwtHelperService();
-  decodedToken: any;
 
   constructor(private readonly fb: FormBuilder,
      private readonly auth: AuthService,

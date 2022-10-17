@@ -1,3 +1,79 @@
+.yp_nav{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: #930CA2;
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 85%;
+        height: 1px;
+        background-color: #fff;
+        box-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 8px #0fa,
+                0 0 9px #0fa,
+                0 0 10px #0fa,
+                0 0 15px #0fa;
+    }
+    &::after{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        content: '';
+        width: 85%;
+        height: 1px;
+        background-color: #fff;
+        box-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #0fa,
+                0 0 8px #0fa,
+                0 0 9px #0fa,
+                0 0 10px #0fa,
+                0 0 15px #0fa;
+    }
+    
+
+    &_link{
+        text-align: center;
+        color: white;
+        width: 95px;
+        border: 1px solid #0fa;
+        box-shadow:
+                0 0 7px #fff,
+                0 0 1px #fff,
+                0 0 2px #fff,
+                0 0 12px #0fa,
+                0 0 8px #0fa,
+                0 0 9px #0fa,
+                0 0 1px #0fa,
+                0 0 1px #0fa;
+
+                &:hover {
+                    text-shadow: inset 0 0 10px #0bf4f3, 0 0 20px #0bf4f3 inset, 0 0 20px #0bf4f3 inset;
+
+                    box-shadow:
+                        0 0 7px #fff,
+                        0 0 1px #fff,
+                        0 0 2px #fff,
+                        0 0 12px #0DFE05,
+                        0 0 8px #0DFE05,
+                        0 0 9px #0DFE05,
+                        0 0 1px #0DFE05,
+                        0 0 1px #0DFE05;
+                }
+    }
+}
 .dashboard{
     background: url('https://as2.ftcdn.net/v2/jpg/02/50/14/31/1000_F_250143108_q9uJAbKnekIKiT2fPsLsjRnakSAt2uVj.jpg') fixed 0 0 no-repeat;
     background-position: center;
