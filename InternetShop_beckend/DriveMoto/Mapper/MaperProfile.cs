@@ -11,6 +11,7 @@ namespace DriveMoto.Mapper
         {
             CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<Product, ProductDTO>().ReverseMap();
+            CreateMap<Cart, CartDTO>().ReverseMap();
             CreateMap<Advertisement, AdvertisementDTO>().ReverseMap();
 
             CreateMap<CartItem, CartItemDTO>()

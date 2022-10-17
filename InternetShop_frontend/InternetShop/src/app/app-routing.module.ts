@@ -6,6 +6,7 @@ import { EditAdvertisingComponent } from "./componets/advertising/edit-advertisi
 import { CartComponent } from "./componets/cart/cart.component";
 import { DashboardComponent } from "./componets/dashboard/dashboard.component";
 import { LoginComponent } from "./componets/login/login.component";
+import { OrderComponent } from "./componets/order/order.component";
 import { AddProductComponent } from "./componets/product/add-product/add-product.component";
 import { EditProductComponent } from "./componets/product/edit-product/edit-product.component";
 import { ProductComponent } from "./componets/product/product.component";
@@ -29,7 +30,9 @@ const routes: Routes = [
   {path: 'advertisement/add', component: AddAdvertisingComponent},
   {path: 'advertisement/edit/:id', component: EditAdvertisingComponent},
 
-  {path: 'cart', component: CartComponent}
+  {path: 'cart', component: CartComponent},
+
+  {path: 'order', component: OrderComponent}
 
 
 

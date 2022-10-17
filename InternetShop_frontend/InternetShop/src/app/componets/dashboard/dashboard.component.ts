@@ -50,6 +50,18 @@ export class DashboardComponent implements OnInit {
         return a;
       }
      })
-  }  
+  }
+  getAdvertisement(){
+    this.advertisementService.getAllAdvertisement()
+    .subscribe({
+      next: (advertisements) => {
+        this.advertisements = advertisements;
+        console.log(advertisements);
+      },
+      error: (ressponse) => {
+        console.log(ressponse)
+      }
+    });
+  }
 }
 

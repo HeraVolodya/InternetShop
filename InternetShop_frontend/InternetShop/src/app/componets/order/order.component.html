@@ -1,0 +1,37 @@
+<body>
+    <div class="product">
+      <table *ngIf="carts">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Data Add</th>
+            <th>Image</th>
+            <th>Producer</th>
+            <th>Model</th>
+            <th>TotalPrice</th>
+            <th>Discount</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      <tbody>
+        <tr *ngFor="let cart of carts">
+          <td class="secondText">{{ cart.id }}</td>
+          <td class="secondText">{{ cart.dataTime }}</td>
+          <td class="importantText"><img src="{{ cart.imageURL }}" alt="phone" width="75px" height="90px"></td> 
+          <td>{{ cart.producer }}</td>
+          <td>{{ cart.model }}</td>
+          <td>{{ cart.totalPrice }}</td>
+          <td>{{ cart.discount }}</td>
+          <td>{{ cart.phone }}</td>
+          <td>{{ cart.address }}</td>
+          <td><a id="edit" [routerLink]="['/product', 'edit', cart.id]">Delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+  
+  <p *ngIf="!carts">No Carts Found</p>
+  
+  </div>
+  </body>

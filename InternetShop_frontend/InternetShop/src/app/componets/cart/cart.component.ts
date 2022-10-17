@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AddCartModel } from 'src/app/models/cart-models/add-cart-model';
 import { CartService } from 'src/app/services/cart/cart.service';
 
 @Component({
@@ -10,7 +12,17 @@ export class CartComponent implements OnInit {
 
   public products : any = [];
   public grandTotal !: number;
-  constructor(private cartService : CartService) { }
+
+  addOrderRequest: AddCartModel = {
+    imageURL: '',
+    producer: '',
+    model: '',
+    totalPrice: '',
+    discount: '',
+    phone: '',
+    address: ''
+  };
+  constructor(private cartService : CartService, private router: Router) { }
 
   ngOnInit(): void {
     this.cartService.getProduct()
@@ -26,5 +38,13 @@ export class CartComponent implements OnInit {
   emptyCartItem(){
     this.cartService.removeAllCartItem();
   }
-
+  addOrder(){
+    this.cartService.addOrder(this.addOrderRequest)
+    .subscribe({
+      next: (product) => {
+        this.router.navigate(['/dashboard']);
+        console.log(product)
+      }
+    });
+  }
 }

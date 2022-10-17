@@ -23,7 +23,7 @@
                                 <td class="importantText"><img src="{{ item.imageURL }}" alt="phone" width="75px" height="90px"></td> 
                                 <td>{{ item.producer }}</td>
                                 <td>{{ item.model }}</td>
-                                <td>{{ item.producer }}</td>
+                                <td>{{ item.diagonal }}</td>
                                 <td>{{ item.camera }}</td>
                                 <td>{{ item.price }}</td>
                                 <td>{{ item.discount }}</td>
@@ -36,7 +36,7 @@
                                 <td colspan="4"></td>
                                 <td><button (click)="emptyCartItem()" class="btn btn-danger">Empty Cart</button></td>
                                 <td><button routerLink="/dashboard" class="btn btn-primary">Shop More</button></td>
-                                <td><button class="btn btn-success">Checkout</button></td>
+                                <td><button class="btn btn-success" (click)="addOrder()">Checkout</button></td>
                                 <td><strong>Grand Total : ${{grandTotal}}</strong></td>
                             </tr>
                         </tbody>

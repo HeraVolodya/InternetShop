@@ -15,6 +15,12 @@
         <div class="yp_nav_link">Xiaomi</div>
     </a>
 </div>
+<div *ngFor="let advertisement of advertisements">
+    <div class="advertisement_img" style="background-image: url('{{ advertisement.imageURL }}');">
+        <div class="importantText" >{{ advertisement.text }}</div>
+    </div>
+
+</div>
 <body class="dashboard">
     <div>
         <div class="container">

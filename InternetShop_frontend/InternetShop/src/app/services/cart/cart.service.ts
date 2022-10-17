@@ -1,5 +1,8 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Injectable, Input } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { AddCartModel } from 'src/app/models/cart-models/add-cart-model';
+import { CartModel } from 'src/app/models/cart-models/cart-model';
 import { ProductModel } from 'src/app/models/product-models/product-model';
 import { RegisterClient } from 'src/app/models/user-models/register-client-model';
 
@@ -8,10 +11,11 @@ import { RegisterClient } from 'src/app/models/user-models/register-client-model
 })
 export class CartService {
 
-  public cartItemList : any = []; //!!!!!!!!!!!!!!!!!!
+  public cartItemList : any = [];
   public productList = new BehaviorSubject<any>([]);
+  public CartApiUrl: string = "https://localhost:7122/api/Cart/";
   
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getProduct(){
     return this.productList.asObservable();
@@ -44,5 +48,11 @@ export class CartService {
   removeAllCartItem(){
     this.cartItemList = [];
     this.productList.next(this.cartItemList);
+  }
+  getAllCarts(): Observable<CartModel[]>{
+    return this.http.get<CartModel[]>(this.CartApiUrl + 'getCarts');
+  }
+  addOrder(addCartRequest: AddCartModel): Observable<AddCartModel>{
+    return this.http.post<AddCartModel>(this.CartApiUrl + 'addCart', addCartRequest)
   }
 }

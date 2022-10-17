@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AdvertisementModel } from './models/advertisements/advertisement-model';
+import { CartModel } from './models/cart-models/cart-model';
 import { ProductModel } from './models/product-models/product-model';
 import { AdvertisementService } from './services/advertisement_services/advertisement.service';
 
@@ -17,7 +18,8 @@ export class AppComponent {
   public filterProducer : any;
   public productList: ProductModel[] = [];
   public totalItem : number = 0;
-  advertisements: AdvertisementModel[] = [];
+  public advertisements: AdvertisementModel[] = [];
+
   constructor(
     private cartService: CartService,
     private advertisementService: AdvertisementService) {}
@@ -26,7 +28,7 @@ export class AppComponent {
       this.cartService.getProduct()
       .subscribe(res=>{
         this.totalItem = res.length;
-      })
+      });
 
       this.advertisementService.getAllAdvertisement()
       .subscribe({
@@ -38,7 +40,7 @@ export class AppComponent {
         console.log(ressponse)
       }
     });
-    }
+}
 }
 
 
