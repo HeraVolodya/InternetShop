@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { AddAdvertisingComponent } from "./componets/advertising/add-advertising/add-advertising/add-advertising.component";
 import { AdvertisingComponent } from "./componets/advertising/advertising.component";
 import { EditAdvertisingComponent } from "./componets/advertising/edit-advertising/edit-advertising/edit-advertising.component";
+import { CartComponent } from "./componets/cart/cart.component";
 import { DashboardComponent } from "./componets/dashboard/dashboard.component";
 import { LoginComponent } from "./componets/login/login.component";
 import { AddProductComponent } from "./componets/product/add-product/add-product.component";
@@ -14,6 +15,7 @@ import { RegisterComponent } from "./componets/register/register.component";
 
 
 const routes: Routes = [
+  //{path: '',redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
 
@@ -25,7 +27,9 @@ const routes: Routes = [
 
   {path: 'advertisement', component: AdvertisingComponent},
   {path: 'advertisement/add', component: AddAdvertisingComponent},
-  {path: 'advertisement/edit/:id', component: EditAdvertisingComponent}
+  {path: 'advertisement/edit/:id', component: EditAdvertisingComponent},
+
+  {path: 'cart', component: CartComponent}
 
 
 

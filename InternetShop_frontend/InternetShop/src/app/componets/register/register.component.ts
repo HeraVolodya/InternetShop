@@ -16,8 +16,7 @@ export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
   constructor(private readonly fb : FormBuilder,
      private readonly auth: AuthService,
-      private readonly router: Router,
-      private dialogRef: MatDialog) { }
+      private readonly router: Router) { }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -48,9 +47,5 @@ export class RegisterComponent implements OnInit {
       ValidateForm.validateAllFormFileds(this.registerForm);
       alert('Your form is invalid');
     }
-  }
-  
-  openDialogLogin(){
-    this.dialogRef.open(LoginComponent);
   }
 }

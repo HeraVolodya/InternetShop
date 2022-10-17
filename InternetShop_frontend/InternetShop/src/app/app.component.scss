@@ -136,6 +136,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
                 font-size: 2rem;
                 vertical-align: center;
                 margin: 4px 20px 0px 20px;
+                position: relative;
 
                 &:before {
                     height: 0%;
@@ -144,6 +145,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
                 &:hover {
                     color: #fff;
                     text-shadow: inset 0 0 10px #0bf4f3, 0 0 20px #0bf4f3 inset, 0 0 20px #0bf4f3 inset;
+                }
+
+                &_label{
+                    position: absolute;
+                    top: 70%;
+                    left: 30px;
+                    color: red;
                 }
             }
             &_dropdown-menu{
@@ -179,14 +187,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
                         color: #fff;
                     }
             }
-            .yp_header_btn_icon_label{
-                background-color: red;
-                padding: 2px;
-                text-align: center;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-            }
+            
 
 
 
@@ -300,4 +301,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
                     }
         }
     }
+}
+.btns{
+    width: 50px;
+    height: 50px;
+    color: red;
+}
+.number{
+    background: #000;
+    width: 50px;
+    height: 50px;
+    color: red;
+    color: wheat;
 }

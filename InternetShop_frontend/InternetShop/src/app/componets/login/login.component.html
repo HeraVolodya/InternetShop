@@ -1,23 +1,31 @@
 <div class="yp_login">
     <form [formGroup]="loginForm" action="">
-        <div>
-            <span class="fa fa-user yp_login_form_icon"></span>
-            <input formControlName = "email" type="text" placeholder="Email">
-            <div>
+        <div class="yp_login_form">
+            <div class="yp_login_form_input" id="email_block">
+                <span class="fa fa-envelope"></span>
+                <input formControlName = "email" type="text" placeholder="Email">
+            </div>
+            <div class="yp_login_form_required">
                 <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email is required</small>
             </div>
-        </div>
-        <div>
-            <span class="fa fa-lock yp_login_form_icon"></span>
-            <input formControlName = "password" type="text" placeholder="Password">
-            <span (click)="hideShowPassword()" class="fa {{eyeIcon}}" id="yp_login_form_eye"></span>
-            <div>
-                <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</small>
+            <div class="yp_login_form_input">
+                <span class="fa fa-lock"></span>
+                <input formControlName = "password" [type]="type" placeholder="Password">
+                <span (click)="hideShowPassword()" class="fa {{eyeIcon}}" id="yp_login_form_eye"></span>
             </div>
-        </div> 
-        <button (click)="onLogin()" type="submit">Login</button>
-        <a href="" id="forget">Forget Password?</a>
-        <div>Do you whone register?<a href="" id="forget" routerLink="/register">Register</a></div>
+            <div>
+                <small class="yp_login_form_required" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</small>
+            </div>
+            
+        </div>
+        <div class="yp_login_button">
+            <button class="yp_login_button_login" (click)="onLogin()" type="submit">Login</button>
+        </div>
+        
+        <div class="yp_login_register">
+            <div class="yp_login_register_text">Do you whone register?</div>
+            <div><a href="" id="register" routerLink="/register">Register</a> </div>
+        </div>
     </form>
 </div>
 

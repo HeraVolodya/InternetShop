@@ -1,12 +1,12 @@
 <router-outlet>
     <div class="yp">
         <div class="yp_header">
-            <div class="yp_header_logo">
+            <button routerLink="/dashboard" class="yp_header_logo">
                 <p id="text">YuPhone</p>
                 <p id="shadow">
                     <span span id="glow">Yu</span><span id="blink">Phone</span>
                 </p>
-            </div>
+            </button>
             <div class="yp_header_btn">
                 <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user-circle yp_header_btn_icon" aria-hidden="true"></i>
                     <ul class="dropdown-menu yp_header_btn_dropdown-menu">
@@ -23,13 +23,13 @@
                       </ul>
                 </i></a>
                 <a><i class="fa fa-heart yp_header_btn_icon" aria-hidden="true"></i></a>
-                <a><i class="fa fa-shopping-cart yp_header_btn_icon" aria-hidden="true">
-                    <div style="font-size: 25px;" class="badge bg-danger yp_header_btn_icon_label">5</div>
-                </i>
+                <a role="button" routerLink="cart" class="yp_header_btn_icon">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <div class="yp_header_btn_icon_label">{{totalItem}}</div>
                 </a>
                 
 
-                <button class="yp_header_btn_login" (click)="openDialogLogin()">Login/Register</button> 
+                <button class="yp_header_btn_login" routerLink="login">Login/Register</button> 
                 <!-- routerLink="login" -->
             </div>
         </div>
@@ -41,4 +41,7 @@
             <div class="yp_nav_link">Xiaomi </div>
         </div>
     </div>
+    <ng-container *ngFor="let advertisement of advertisements">
+        
+    </ng-container>
 </router-outlet>

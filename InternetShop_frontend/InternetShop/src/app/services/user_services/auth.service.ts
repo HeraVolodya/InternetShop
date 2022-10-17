@@ -20,6 +20,6 @@ export class AuthService {
   //   )
   // }
   login(loginObj: RegisterClient){
-    return this.http.post<any>(`${this.baseUrl}api/Auth/login?`,loginObj);
+    return this.http.post<RegisterClient>(`${this.baseUrl}api/Auth/login?`,loginObj);
   }
 }

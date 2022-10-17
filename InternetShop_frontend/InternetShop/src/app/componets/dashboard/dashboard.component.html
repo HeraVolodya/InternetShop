@@ -1,14 +1,21 @@
-<div>
-    <ng-container *ngFor="let item of productList">
-        <div>
-           <img src="{{ item.imageURL }}" alt="phone" width="90px" height="60px"> 
+<body class="dashboard">
+    <div>
+        <div class="container">
+            <div class="row">
+                <ng-container *ngFor = "let item of productList">
+                    <div class="card col-md-3">
+                        <img class="picture" src="{{ item.imageURL }}" alt="phone"> 
+                        <h2 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.producer}}</h2>
+                        <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;">{{item.model}}</p>
+                        <p><strong>Diagonal: </strong>{{item.diagonal}}"</p>
+                        <p><strong>Camera: </strong>{{item.camera}} Mp</p>
+                        <p><strong>Price: </strong>{{item.price}} $</p>
+                        <p><strong>discount: </strong>{{item.discount}} %</p>
+                        <button class="btn" (click)="addToCart(item)">Add to cart</button>
+                    </div>
+                </ng-container>
+            </div>
         </div>
-        <h5>{{item.producer}}</h5>
-        <p>{{item.model}}</p>
-        <p>{{item.diagonal}}</p>
-        <p>{{item.camera}}</p>
-        <p>{{item.price}}</p>
-        <p>{{item.discount}}</p>
-        <button>Add to cart</button>
-    </ng-container>
-</div>
+    </div>
+    
+</body>

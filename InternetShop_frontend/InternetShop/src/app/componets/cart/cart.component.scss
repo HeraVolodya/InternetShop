@@ -1,0 +1,55 @@
+.product_cart{
+    background: url('https://img.freepik.com/free-vector/realistic-neon-lights-background_52683-59889.jpg?w=740&t=st=1665995159~exp=1665995759~hmac=8908cecc76b475c31cdd9ea7e2fd094a345b01251b7dc0b41657af7ba01984fe') fixed 0 0 no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+.card{
+    height: 60vh;
+    margin: 25px;
+    padding: 25px;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    & img{
+        text-decoration: none;
+        color: inherit;
+        border: none;
+        outline: none;
+        height: 162px;
+        width: 150px;
+        margin: 20px 0px;
+    }
+}
+.cart-table{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+}
+.center .btn{
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    font-weight: 400;
+    padding: 12px 72px;
+    border-radius: 3px !important;
+}
+.btn_delete{
+    width: 90px;
+    height: 45px;
+    background-color: red;
+    color: #fff;
+    border-radius: 20px;
+}
+.table-responsive{
+    color: #fff;
+}

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { LoginComponent } from './componets/login/login.component';
+import { AdvertisementModel } from './models/advertisements/advertisement-model';
+import { AdvertisementService } from './services/advertisement_services/advertisement.service';
+
+import { CartService } from './services/cart/cart.service';
 
 
 @Component({
@@ -11,12 +13,29 @@ import { LoginComponent } from './componets/login/login.component';
 export class AppComponent {
   title = 'InternetShop';
 
+  public totalItem : number = 0;
+  advertisements: AdvertisementModel[] = [];
   constructor(
-    private dialogRef: MatDialog) {}
- 
- openDialogLogin(){
-   this.dialogRef.open(LoginComponent);
- }
+    private cartService: CartService,
+    private advertisementService: AdvertisementService) {}
+  
+    ngOnInit(): void {
+      this.cartService.getProduct()
+      .subscribe(res=>{
+        this.totalItem = res.length;
+      })
+
+      this.advertisementService.getAllAdvertisement()
+      .subscribe({
+      next: (advertisements) => {
+        this.advertisements = advertisements;
+        console.log(advertisements);
+      },
+      error: (ressponse) => {
+        console.log(ressponse)
+      }
+    });
+    }
 }
 
 
